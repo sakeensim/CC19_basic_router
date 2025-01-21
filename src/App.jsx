@@ -13,7 +13,7 @@ function App() {
 
         <div className='flex gap-4'> 
           <Link to="login">Login</Link>
-          <Link to ="register">Register</Link>
+          <Link to ="register">Register.</Link>
         </div>
       </nav>
     <Routes>
