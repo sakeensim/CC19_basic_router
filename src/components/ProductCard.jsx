@@ -19,7 +19,7 @@ const actionAddtoCart = useProductStore((state)=> state.actionAddtoCart)
       <div className="card-actions">
         <button 
         onClick = {()=>actionAddtoCart(product)}
-        className="btn btn-primary">Buy Now</button>
+        className="btn btn-primary">Add to Cart</button>
         {/* <ShoppingCart /> */}
       </div>
     </div>

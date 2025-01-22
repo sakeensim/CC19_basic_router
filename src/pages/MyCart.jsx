@@ -5,6 +5,7 @@ import ProductCard from '../components/ProductCard';
 function MyCart() {
 
     const cart = useProductStore((state)=> state.cart);
+    const actionClear = useProductStore((state)=> state.actionClear)
     console.log(cart)
   return (
     <div>
@@ -15,6 +16,7 @@ function MyCart() {
                 product ={products}/>
             })
         }
+        <button onClick={actionClear}> Clear</button>
     </div>
   )
 }

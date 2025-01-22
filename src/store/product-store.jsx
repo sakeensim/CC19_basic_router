@@ -17,10 +17,20 @@ const productStore = (set) => ({
     actionAddtoCart :(product)=>{
         // console.log(product)
         set((state)=>({cart:[...state.cart, product]}))
-    }
-    
+    },
+    actionClear:()=>{
+        set({cart: [] });
+    }, 
 });
 
-const useProductStore = create(persist(productStore,{name: 'product-store'}))
+const persisStore ={
+    name: 'product-store',
+    partialize : (state)=>({
+        cart: state.cart,
+        
+    })
+}
+
+const useProductStore = create(persist(productStore,persisStore));
 
 export default useProductStore;
