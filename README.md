@@ -1,31 +1,38 @@
-## step 1 Create project
+## Step 1 Create project
 ```bash
 npm create vite .
-npm run install
+npm install 
 npm run dev
 ```
 
-## step 2 push project to github
+## Step 2 push project to github
 ```bash
 git init
+
+
 git add .
-git committ -m "init"
+git commit -m "init"
 git push
 ```
 
-### when update code
+###  when updated code 
 ```bash
 git add .
 git commit -m "init"
 git push
 ```
-## step 3 install React Router
+
+## Step 3 install React Router
 ```bash
 npm i react-router
 ```
+
+
+
 ```jsx
 // rfce
 import { Link, Outlet, Route, Routes } from "react-router";
+import MainNav from "../components/MainNav";
 import Layout from "../layouts/Layout";
 import Home from "../pages/Home";
 import About from "../pages/About";
@@ -37,12 +44,12 @@ function AppRoutes() {
     <div>
       <Routes>
         {/* Public */}
-        <Route path ="/" element={<Layout/>}>
-        <Route path="/" element={<Home/>} />
-        <Route path="about" element={<About/>} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register/>} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About/>} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Route>
 
         {/* Private */}
@@ -57,7 +64,11 @@ function AppRoutes() {
 }
 export default AppRoutes;
 
-## step4 Global State with Zustand
+```
+
+
+
+## Step 4 Global state with Zustand
 ```bash
 npm install zustand
 ```

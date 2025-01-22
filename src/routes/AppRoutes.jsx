@@ -12,6 +12,8 @@ import Setting from "../pages/admin/Setting";
 import Recap from "../pages/Recap";
 import RecapUseState from "../pages/RecapUseState";
 import EasyZustand from "../pages/EasyZustand";
+import Product from "../pages/Product";
+import MyCart from "../pages/MyCart";
 function AppRoutes() {
   return (
     <div>
@@ -26,6 +28,8 @@ function AppRoutes() {
         <Route path="recap" element={<Recap/>} />
         <Route path="recapUseState" element={<RecapUseState/>} />
         <Route path="easyZustand" element={<EasyZustand/>} />
+        <Route path="product" element={<Product/>} />
+        <Route path="MyCart" element={<MyCart/>} />
         </Route>
 
         {/* Private */}
